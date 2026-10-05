@@ -1,0 +1,25 @@
+# --- Privacy: this repo is public. Nothing personal, internal or log-derived is committed. ---
+# Planning/agent state (contains local paths, internal project names, decisions)
+.wayfinder/
+.claude/
+CLAUDE.local.md
+# Session logs and anything derived from them
+*.jsonl
+fixtures/raw/
+**/captures/
+**/recordings/
+**/replay-cache/
+# Secrets, hostnames, tailnet addresses, local config
+.env
+.env.*
+!.env.example
+*.local.*
+.public-guard.local
+# Build/tooling
+node_modules/
+dist/
+coverage/
+*.log
+.vite/
+.DS_Store
+Thumbs.db
