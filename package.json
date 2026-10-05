@@ -1,0 +1,27 @@
+{
+  "name": "drone-city",
+  "private": true,
+  "packageManager": "pnpm@12.8.1",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev:hub": "node --watch apps/hub/src/main.ts",
+    "dev:web": "pnpm --filter @drone-city/web dev",
+    "replay": "node apps/hub/src/replay.ts",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/node": "^24.0.0",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.9.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^3.0.0"
+  }
+}

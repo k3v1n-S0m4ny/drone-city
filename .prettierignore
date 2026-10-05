@@ -1,0 +1,10 @@
+# Not ours to reformat
+prototypes/
+.wayfinder/
+.claude/
+node_modules/
+dist/
+coverage/
+pnpm-lock.yaml
+docs/
+README.md

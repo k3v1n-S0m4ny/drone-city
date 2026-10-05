@@ -8,7 +8,20 @@ Each Claude Code session working on a chosen target repository becomes a drone i
 
 Data model and wire contract: [`docs/data-model.md`](docs/data-model.md)
 
-## Layout (planned)
+## Quick start
+
+```
+pnpm install
+cp .env.example .env      # set TARGET_REPO (bare repo name, lowercase)
+pnpm dev:hub              # hub on 127.0.0.1:8787: POST /v1/logs, GET /ws, GET /health
+pnpm dev:web              # debug table view, proxies /ws to the hub
+pnpm replay <session.jsonl | project-dir> --speed burst   # drive the hub from local logs
+pnpm lint && pnpm typecheck && pnpm test
+```
+
+Turning on the live telemetry on your machines: [`docs/telemetry.md`](docs/telemetry.md).
+
+## Layout
 
 ```
 apps/hub        OTLP/HTTP receiver, session model, WebSocket fan-out, JSONL backfill/replay
